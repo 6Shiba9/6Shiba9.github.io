@@ -19,7 +19,7 @@
                 <div
                     class="flex items-center justify-between px-[135px] xl:py-[30px] py-[20px] w-full gap-[330px] fixed pb-[30px] navbar drop-shadow-sm ">
                     <div class="flex">
-                        <img src="/image/Group 11.png" width="70px" height="43.71px">
+                        <img src="image/Group 11.png" width="70px" height="43.71px">
                     </div>
                     <div class="flex gap-[60px]  hidden xl:flex">
                         <a class="btn_nav" href="#">MAIN</a>
@@ -88,11 +88,11 @@
                 <div class="px-[135px] xl:pt-[120px] pt-[60px]">
                     <div class=" xl:w-[1170px] xl:h-[435px] bg-[#FBFBFB] flex gap-[30px] w-auto h-auto">
                         <div class="drop-shadow-sm ml-[100px] mt-[30px]">
-                            <img src="/image/Rectangle 8.png" width="270px" height="265px">
-                            <img src="/image/Rectangle 10.png" width="270px" height="140px" class="pt-[10px]">
+                            <img src="image/Rectangle 8.png" width="270px" height="265px">
+                            <img src="image/Rectangle 10.png" width="270px" height="140px" class="pt-[10px]">
                         </div>
                         <div>
-                            <img src="/image/Rectangle 9.png" width="270px" height="345px"
+                            <img src="image/Rectangle 9.png" width="270px" height="345px"
                                 class="mt-[60px] drop-shadow-sm">
                         </div>
                         <div>
@@ -154,7 +154,7 @@
                         </div>
                         <div class="flex gap-[30px] mt-[60px]">
                             <div class="relative xl:w-[570px] xl:h-[255px] w-[463px] h-[210px]">
-                                <img src="/image/Rectangle 12.png" alt="Background Image"
+                                <img src="image/Rectangle 12.png" alt="Background Image"
                                     class="w-full h-full object-cover z-0 drop-shadow-md filter grayscale-[100%] brightness-[40%]" />
                                 <div class="ml-[60px] absolute inset-0 items-left z-10">
                                     <div class="xl:text-[64px] text-[48px] text-white font-bold ">
@@ -167,13 +167,13 @@
                                 </div>
                             </div>
                             <div class="xl:w-[570px] xl:h-[255px] w-[463px] h-[210px]">
-                                <img src="/image/image 15.png">
+                                <img src="image/image 15.png">
                             </div>
                         </div>
                         <div class="flex gap-[30px] mt-[30px] drop-shadow-md justify-between">
-                            <img src="/image/image 16.png" class="hidden xl:flex">
-                            <img src="/image/image 17.png" class="flex">
-                            <img src="/image/image 18.png" class=" xl:flex">
+                            <img src="image/image 16.png" class="hidden xl:flex">
+                            <img src="image/image 17.png" class="flex">
+                            <img src="image/image 18.png" class=" xl:flex">
                         </div>
                         <div class="flex justify-end drop-shadow-md">
                             <button
@@ -224,7 +224,7 @@
         <div class="bg-neutral-700 w-full xl:mt-[120px] mt-[60px]"> 
             <div class="flex justify-between px-[135px] xl:pt-[58px] pt-[30px]">
                 <div>
-                    <img src="/image/Group 11 1.png" class="w-[70px] h-[43.71px] xl:w-[145px] xl:h-[90px]">
+                    <img src="image/Group 11 1.png" class="w-[70px] h-[43.71px] xl:w-[145px] xl:h-[90px]">
                 </div>
                 <div>
                     <ul class="list-none xl:text-[16px] text-[12px] text-white flex flex-col gap-[20px]">
@@ -278,50 +278,41 @@
     menuToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
-    // กำหนดรูปภาพทั้งหมดที่ต้องการสลับ
     const images = [
-        "/image/Rectangle 6.png",
-        "/image/Rectangle 7.png"  // เพิ่ม path ของรูปภาพที่ต้องการ
+        "image/Rectangle 6.png",
+        "image/Rectangle 7.png" 
     ];
 
-    let currentIndex = 0; // เริ่มต้นที่รูปแรก
+    let currentIndex = 0;
 
-    // ค้นหาองค์ประกอบใน DOM
     const imgElement = document.getElementById("project-img");
     const prevButton = document.getElementById("prev-btn");
     const nextButton = document.getElementById("next-btn");
     const imageIndexElement = document.getElementById("image-index");
 
-    // ฟังก์ชันในการเปลี่ยนรูปภาพ
     function changeImage() {
-        // ลด opacity ของรูปภาพปัจจุบันให้หายไป
         imgElement.classList.remove("opacity-100");
         imgElement.classList.add("opacity-0");
 
-        // เมื่อ opacity ลดลงเสร็จแล้วให้เปลี่ยน src ของรูปภาพ
         setTimeout(() => {
             imgElement.src = images[currentIndex];
             imgElement.classList.remove("opacity-0");
             imgElement.classList.add("opacity-100");
 
-            // อัพเดตหมายเลขที่แสดงในหน้า
-            imageIndexElement.textContent = currentIndex + 1;  // เพิ่ม 1 เพื่อให้แสดงหมายเลขที่ถูกต้อง (เริ่มจาก 1)
-        }, 300); // ตั้งเวลาให้ตรงกับความยาวของ transition
+            imageIndexElement.textContent = currentIndex + 1
+        }, 300);
     }
 
-    // คลิกปุ่มถัดไป
     nextButton.addEventListener("click", function () {
-        currentIndex = (currentIndex + 1) % images.length; // เปลี่ยนรูปภาพถัดไป
+        currentIndex = (currentIndex + 1) % images.length;
         changeImage();
     });
 
-    // คลิกปุ่มก่อนหน้า
     prevButton.addEventListener("click", function () {
-        currentIndex = (currentIndex - 1 + images.length) % images.length; // เปลี่ยนรูปภาพก่อนหน้า
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
         changeImage();
     });
 
-    // เรียกใช้ครั้งแรกเพื่อแสดงรูปแรก
     changeImage();
 </script>
 
