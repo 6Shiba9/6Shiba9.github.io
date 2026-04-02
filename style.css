@@ -1,0 +1,44 @@
+
+.navbar {
+    top: 0;
+    /* กำหนดระยะห่างจากขอบบน */
+    z-index: 10;
+    /* ใช้เพื่อป้องกันการถูกบดบัง */
+    background-color: #fff;
+    /* ป้องกันพื้นหลังโปร่ง */
+}
+
+.btn_nav {
+    position: relative;
+    padding: 4px 15px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.btn_nav::before,
+.btn_nav::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    background-color: #000000;
+    transition: width 0.3s;
+}
+
+/* เส้นด้านบน */
+.btn_nav::before {
+    top: 0;
+    left: 0;
+}
+
+/* เส้นด้านล่าง */
+.btn_nav::after {
+    bottom: 0;
+    right: 0;
+}
+
+/* เมื่อ hover */
+.btn_nav:hover::before,
+.btn_nav:hover::after {
+    width: 100%;
+}

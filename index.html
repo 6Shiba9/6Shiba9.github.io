@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div>
+        <header>
+            <nav>
+                <div
+                    class="flex items-center justify-between px-[135px] xl:py-[30px] py-[20px] w-full gap-[330px] fixed pb-[30px] navbar drop-shadow-sm ">
+                    <div class="flex">
+                        <img src="/image/Group 11.png" width="70px" height="43.71px">
+                    </div>
+                    <div class="flex gap-[60px]  hidden xl:flex">
+                        <a class="btn_nav" href="#">MAIN</a>
+                        <a class="btn_nav" href="#">GALLERY</a>
+                        <a class="btn_nav" href="#">PROJECTS</a>
+                        <a class="btn_nav" href="#">CERTIFICATIONS</a>
+                        <a class="btn_nav" href="#">CONTACT</a>
+                    </div>
+                    <div class="xl:hidden">
+                        <button id="mobile-menu-button">
+                            <ion-icon name="menu-outline" class="text-[44px] hover:text-[#5b5b5b]"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+                <div id="mobile-menu"
+                    class="hidden xl:hidden fixed flex flex-col bg-[#FBFBFB] w-[200px] mt-[-20px] translate-x-[900px] z-10 drop-shadow-md">
+                    <a class="hover:bg-[#E5E5E5] p-[20px]" href="#">MAIN</a>
+                    <a class="hover:bg-[#E5E5E5] p-[20px]" href="#">GALLERY</a>
+                    <a class="hover:bg-[#E5E5E5] p-[20px]" href="#">PROJECTS</a>
+                    <a class="hover:bg-[#E5E5E5] p-[20px]" href="#">CERTIFICATIONS</a>
+                    <a class="hover:bg-[#E5E5E5] p-[20px]" href="#">CONTACT</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <card_slider>
+                <div class="w-full mt-[120px] ">
+                    <div class="flex px-[135px] gap-[40px] justify-between items-center">
+                        <div>
+                            <ul class="list-none flex flex-col text-[48px] xl:text-[60px] ">
+                                <li class="text-[#BDBDBD] ">
+                                    PROJECTS
+                                </li>
+                                <li class="font-bold">
+                                    Lorum
+                                </li>
+                            </ul>
+                            <div class="pt-[90px]">
+                                <button id="prev-btn"
+                                    class="xl:p-[22px] p-[12px] bg-[#ffffff] mr-[22px] border border-[#E5E5E5] hover:bg-[#E5E5E5]">
+                                    ⟵
+                                </button>
+                                <button id="next-btn"
+                                    class="xl:p-[22px] p-[12px] bg-[#ffffff] border border-[#E5E5E5] hover:bg-[#E5E5E5]">
+                                    ⟶
+                                </button>
+                                <div class="text-[42px]  text-[#E5E5E5] flex gap-[35px] pt-[85px] xl:text-[52px]">
+                                    <div id="image-index">1</div>
+                                    <div>/</div>
+                                    <div>2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img id="project-img" src="/image/Rectangle 6.png" width="770px" height="829px"
+                                class="transition-opacity duration-500 ease-in-out opacity-100">
+                            <button
+                                class="absolute bg-white hover:text-black tracking-widest xl:translate-y-[-64px] translate-y-[-44px] pl-[16px] pr-[29px] py-[14px] text-[11px] hover:bg-[#E5E5E5] lx:translate-y-[-72px] xl:pl-[20px] xl:pr-[49px] xl:py-[24px]">
+                                VIEW PROJECT ⟶
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </card_slider>
+            <content>
+                <div class="px-[135px] xl:pt-[120px] pt-[60px]">
+                    <div class=" xl:w-[1170px] xl:h-[435px] bg-[#FBFBFB] flex gap-[30px] w-auto h-auto">
+                        <div class="drop-shadow-sm ml-[100px] mt-[30px]">
+                            <img src="/image/Rectangle 8.png" width="270px" height="265px">
+                            <img src="/image/Rectangle 10.png" width="270px" height="140px" class="pt-[10px]">
+                        </div>
+                        <div>
+                            <img src="/image/Rectangle 9.png" width="270px" height="345px"
+                                class="mt-[60px] drop-shadow-sm">
+                        </div>
+                        <div>
+                            <div class="text-[#BDBDBD] xl:text-[64px] text-[48px]">
+                                About
+                            </div>
+                            <div class="w-[400px] h-[200px] xl:text-[16px] text-[14px]">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five
+                                centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged.
+                            </div>
+                            <button
+                                class="bg-white xl:text-[12px] xl:pl-[35px] xl:pr-[64px] xl:py-[24px] text-[8px] pl-[16px] pr-[29px] py-[14px] hover:bg-[#E5E5E5] hover:text-black tracking-widest">
+                                READ MORE ⟶</button>
+                        </div>
+                    </div>
+                </div>
+            </content>
+            <content class="mx-[135px]">
+                <div class="px-[135px] xl:pt-[120px] pt-[40px]">
+                    <div class=" xl:w-[1170px] xl:h-[268px] w-auto h-auto">
+                        <div class="xl:text-[64px] text-[48px] text-left text-[#BDBDBD]">Main Focus/Mission Statement
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-[30px] ">
+                                <div class="xl:text-[150px] text-[100px]  font-bold text-[#E5E5E5] translate-y-[-10px]">
+                                    1</div>
+                                <div class="xl:text-[22px] text-[16px] w-[279px] h-[144px] mt-[40px]">Lorem ipsum dolor
+                                    sit amet,
+                                    consectetur
+                                    adipiscing elit. Sed efficitur, lectus et facilisis
+                                    placerat.</div>
+                            </div>
+                            <div class="flex gap-[30px]">
+                                <div class="xl:text-[150px] text-[100px] font-bold text-[#E5E5E5] translate-y-[-10px]">2
+                                </div>
+                                <div class="xl:text-[22px] text-[16px] xl:w-[420px] w-[379px] h-[144px] mt-[40px]">Lorem ipsum dolor
+                                    sit amet,
+                                    consectetur
+                                    adipiscing elit. Sed efficitur, lectus et facilisis placerat, magna mauris porttitor
+                                    tortor,
+                                    a auctor est felis ut nisl.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </content>
+            <content>
+                <div class="px-[135px] xl:pt-[120px] pt-[10px]">
+                    <div class="xl:w-[1170px] xl:h-[765px] w-auto h-auto">
+                        <div class="xl:text-[64px] text-[48px] text-left text-[#BDBDBD] mb-[6 0px]">
+                            Our Projects
+                        </div>
+                        <div class="flex gap-[30px] mt-[60px]">
+                            <div class="relative xl:w-[570px] xl:h-[255px] w-[463px] h-[210px]">
+                                <img src="/image/Rectangle 12.png" alt="Background Image"
+                                    class="w-full h-full object-cover z-0 drop-shadow-md filter grayscale-[100%] brightness-[40%]" />
+                                <div class="ml-[60px] absolute inset-0 items-left z-10">
+                                    <div class="xl:text-[64px] text-[48px] text-white font-bold ">
+                                        <div class="translate-y-[20px]">Sample</div>
+                                        <div>Project</div>
+                                    </div>
+                                    <a class="text-white text-left hover:underline hover:text-[#E5E5E5]" href="#">VIEW
+                                        PROJECT
+                                        ⟶</a>
+                                </div>
+                            </div>
+                            <div class="xl:w-[570px] xl:h-[255px] w-[463px] h-[210px]">
+                                <img src="/image/image 15.png">
+                            </div>
+                        </div>
+                        <div class="flex gap-[30px] mt-[30px] drop-shadow-md justify-between">
+                            <img src="/image/image 16.png" class="hidden xl:flex">
+                            <img src="/image/image 17.png" class="flex">
+                            <img src="/image/image 18.png" class=" xl:flex">
+                        </div>
+                        <div class="flex justify-end drop-shadow-md">
+                            <button
+                                class="text-white tracking-widest xl:py-[24px] xl:px-[49px] py-[14px] px-[29px] xl:text-[12px] text-[8px] mt-[30px] bg-neutral-600 text-left hover:bg-neutral-500 ">
+                                ALL PROJECTS ⟶
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </content>
+            <content>
+                <div class="px-[135px] xl:pt-[120px] pt-[30px]">
+                    <div class="xl:w-[1170px] xl:h-[603px] w-auto h-auto">
+                        <div class="xl:text-[64px] text-[48px] text-left text-[#BDBDBD]">
+                            Contact Us
+                        </div>
+                        <div class="flex gap-[30px] drop-shadow-sm items-center">
+                            <div class="flex flex-col ">
+                                <input type="text" placeholder="Name"
+                                    class="xl:w-[391px] xl:h-[46px] w-[391px] h-[36px] bg-[#E5E5E5] mt-2 p-[20px]">
+                                <input type="text" placeholder="Phone Number"
+                                    class="xl:w-[391px] xl:h-[46px] w-[391px] h-[36px] bg-[#E5E5E5] mt-2 p-[20px]"
+                                    required>
+                                <input type="text" placeholder="E-mail"
+                                    class="xl:w-[391px] xl:h-[46px] w-[391px] h-[36px] bg-[#E5E5E5] mt-2 p-[20px]"
+                                    required>
+                                <input type="text" placeholder="Interested In"
+                                    class="xl:w-[391px] xl:h-[46px] w-[391px] h-[36px] bg-[#E5E5E5] mt-2 p-[20px]">
+                                <textarea placeholder="Message"
+                                    class="w-[391px] h-[86px] xl:h-[146px] xl:w-[391px] bg-[#E5E5E5] mt-2 p-[20px] resize-none"
+                                    required></textarea>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <img src="/image/image 12.png" lass="xl:w-[749px] h-[369px] w-auto">
+                            </div>
+                        </div>
+                        <button
+                            class=" bg-neutral-600 hover:bg-neutral-500 text-white tracking-widest xl:py-[24px] xl:px-[49px] py-[14px] px-[29px] xl:text-[12px] text-[8px] xl:mt-[79px] mt-[40px] drop-shadow-sm">
+                            SEND EMAIL ⟶
+                        </button>
+                    </div>
+                </div>
+            </content>
+        </main>
+    </div>
+    <footer>
+        <div class="bg-neutral-700 w-full xl:mt-[120px] mt-[60px]"> 
+            <div class="flex justify-between px-[135px] xl:pt-[58px] pt-[30px]">
+                <div>
+                    <img src="/image/Group 11 1.png" class="w-[70px] h-[43.71px] xl:w-[145px] xl:h-[90px]">
+                </div>
+                <div>
+                    <ul class="list-none xl:text-[16px] text-[12px] text-white flex flex-col gap-[20px]">
+                        <li class="">
+                            <a href="#" class="hover:underline">Information</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="hover:underline">Main</a>
+                        </li>
+                        <li class=""><a href="#" class="hover:underline">Gallery</a></li>
+                        <li class=""><a href="#" class="hover:underline">Projects</a></li>
+                        <li class=""><a href="#" class="hover:underline">Certification</a></li>
+                        <li class=""><a href="#" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-[30px] text-white xl:text-[15px] text-[12px]">
+                    <div class="font-bold">Contacts</div>
+                    <div class="flex gap-[10px] items-center">
+                        <ion-icon name="location-outline"></ion-icon>
+                        <p>1234 Sample Street
+                            Austin Texas 78704</p>
+                    </div>
+                    <div class="flex gap-[10px] items-center">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <p>512.333.2222</p>
+                    </div>
+                    <div class="flex gap-[10px] items-center">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <p>sampleemail@gmail.com</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-bold text-white">Social Medie</div>
+                    <div class="flex gap-[40px] pt-[23px] items-center text-white xl:text-[24px] text-[16px]">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                        <ion-icon name="logo-pinterest"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <hr class=" mt-[60px] border-t-2 border-neutral-600">
+            <div class="text-[#C8C8C8] text-center py-[24px] xl:text-[12px] text-[8px]">© 2021 All Rights Reserved</div>
+        </div>
+    </footer>
+</body>
+<script>
+    const menuToggle = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    // กำหนดรูปภาพทั้งหมดที่ต้องการสลับ
+    const images = [
+        "/image/Rectangle 6.png",
+        "/image/Rectangle 7.png"  // เพิ่ม path ของรูปภาพที่ต้องการ
+    ];
+
+    let currentIndex = 0; // เริ่มต้นที่รูปแรก
+
+    // ค้นหาองค์ประกอบใน DOM
+    const imgElement = document.getElementById("project-img");
+    const prevButton = document.getElementById("prev-btn");
+    const nextButton = document.getElementById("next-btn");
+    const imageIndexElement = document.getElementById("image-index");
+
+    // ฟังก์ชันในการเปลี่ยนรูปภาพ
+    function changeImage() {
+        // ลด opacity ของรูปภาพปัจจุบันให้หายไป
+        imgElement.classList.remove("opacity-100");
+        imgElement.classList.add("opacity-0");
+
+        // เมื่อ opacity ลดลงเสร็จแล้วให้เปลี่ยน src ของรูปภาพ
+        setTimeout(() => {
+            imgElement.src = images[currentIndex];
+            imgElement.classList.remove("opacity-0");
+            imgElement.classList.add("opacity-100");
+
+            // อัพเดตหมายเลขที่แสดงในหน้า
+            imageIndexElement.textContent = currentIndex + 1;  // เพิ่ม 1 เพื่อให้แสดงหมายเลขที่ถูกต้อง (เริ่มจาก 1)
+        }, 300); // ตั้งเวลาให้ตรงกับความยาวของ transition
+    }
+
+    // คลิกปุ่มถัดไป
+    nextButton.addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % images.length; // เปลี่ยนรูปภาพถัดไป
+        changeImage();
+    });
+
+    // คลิกปุ่มก่อนหน้า
+    prevButton.addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; // เปลี่ยนรูปภาพก่อนหน้า
+        changeImage();
+    });
+
+    // เรียกใช้ครั้งแรกเพื่อแสดงรูปแรก
+    changeImage();
+</script>
+
+</html>
